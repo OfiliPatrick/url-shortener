@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% for url in urls %}
+Original Url: {{url.original_url}} 
+Short URL: {{url.short_url}}
+views: {{url.views}}
+<br/>
+{% endfor %}
+
+{% endblock %}

@@ -2,6 +2,6 @@
 
 {% block body %}
 original Url: {{original_url}} <br>
-shortened Url: {{short_url}}
+shortened Url: {{ url_for('shortener.redirect_to_original_url', query_short_url = short_url , _external = True)}}
 
 {% endblock %}

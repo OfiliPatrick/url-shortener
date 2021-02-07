@@ -13,7 +13,7 @@ class Url(db.Model):
         self.short_url = self.generate_short_url()
 
     def generate_short_url(self):
-        new_url = "a"
+        new_url = "2p1q"
         url_exist = self.query.filter_by(short_url=new_url).first()
         
         if url_exist:

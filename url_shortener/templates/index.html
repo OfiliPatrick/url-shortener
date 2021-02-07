@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form method= "POST" action="{{ url_for('shortener.add_url') }}">
+    <input type="text" name="original_url">
+    <input type = "submit">
+</form>
+{% endblock %}

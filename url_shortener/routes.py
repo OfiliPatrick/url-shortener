@@ -5,7 +5,6 @@ from .auth import requires_auth
 
 shortener = Blueprint('shortener', __name__)
 
-
 @shortener.route("/")
 @requires_auth
 def index():

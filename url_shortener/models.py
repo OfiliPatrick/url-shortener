@@ -5,7 +5,7 @@ from .utils import base62_encoding
 class Url(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     original_url = db.Column(db.String(512))
-    short_url = db.Column(db.String(7), unique=True)
+    short_url = db.Column(db.String(8), unique=True)
     views = db.Column(db.Integer, default = 0)
     date_created = db.Column(db.DateTime, default=datetime.now)
     
@@ -14,7 +14,7 @@ class Url(db.Model):
         self.short_url = self.generate_short_url()
 
     def generate_short_url(self):
-        new_url = base62_encoding(7)
+        new_url = base62_encoding(8)
         url_exist = self.query.filter_by(short_url=new_url).first()
         
         if url_exist:

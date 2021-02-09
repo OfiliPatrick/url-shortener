@@ -1,9 +1,38 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block body %}
 
-{% block body %}
+<header>
+  <img alt="logoimage" class="logoimage" src="/static/images/url.png">
+  <a class="logo">Shrinkly</a>
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <a href="1">Home</a>
+      </li>
+      <li>
+        <a href="https://github.com/OfiliPatrick/url-shortener">GitHub</a>
+      </li>
+    </ul>
+  </nav>
+  <a class="cta" href="https://github.com/OfiliPatrick">
+    <button>Contact</button>
+  </a>
+</header>
 
-<form method= "POST" action="{{ url_for('shortener.add_url') }}">
-    <input type="text" name="original_url">
-    <input type = "submit">
+
+<div class="hero">
+  <p class="mainheading">The Ultimate URL Shortening Service</p>
+  <p class="directions">Paste your URL below to Shorten it</p>
+</div>
+
+<form
+  class="formsection"
+  method="POST"
+  action="{{ url_for('shortener.add_url') }}"
+>
+  <input class="urlinput" type="text" name="original_url" />
+  <input class = "submitbutton" type="submit" />
 </form>
+
+{% block urladded %}{% endblock %}
+
 {% endblock %}

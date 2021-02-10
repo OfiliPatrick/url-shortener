@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block body %}
 
 <header>
-  <img alt="logoimage" class="logoimage" src="/static/images/url.png">
+  <img alt="logoimage" class="logoimage" src="/static/images/url.png" />
   <a class="logo">Shrinkly</a>
   <nav>
     <ul class="nav-links">
@@ -18,10 +18,17 @@
   </a>
 </header>
 
+<div>
+  <img alt = "heroimage" class="heroimage" src="/static/images/heroimage.png" />
+</div>
 
 <div class="hero">
   <p class="mainheading">The Ultimate URL Shortening Service</p>
-  <p class="directions">Paste your URL below to Shorten it</p>
+  <p class="about">
+    Shrinkly is a URL Shortener that transforms long URLs to more appealing
+    easier to share short URLs.
+  </p>
+  <p class="directions">Paste your URL below to Shorten it.</p>
 </div>
 
 <form
@@ -29,10 +36,13 @@
   method="POST"
   action="{{ url_for('shortener.add_url') }}"
 >
-  <input class="urlinput" type="text" name="original_url" />
-  <input class = "submitbutton" type="submit" />
+  <input
+    class="urlinput"
+    placeholder="Type or Paste your URL"
+    type="text"
+    name="original_url"
+  />
+  <input class="submitbutton" type="submit" value="Shorten!" />
 </form>
 
-{% block urladded %}{% endblock %}
-
-{% endblock %}
+{% block urladded %}{% endblock %} {% endblock %}

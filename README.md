@@ -1,6 +1,6 @@
-# Url-shortener - Shrinkly
+# URL-shortener: Shrinkly
 
-Url shortening service built with Flask and SQL.
+URL shortening service built with Flask and SQL.
 
 ## Overview
 

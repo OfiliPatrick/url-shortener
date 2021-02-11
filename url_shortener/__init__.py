@@ -9,3 +9,5 @@ def create_app(config_file = "settings.py"):
     app.register_blueprint(shortener)
 
     return app
+
+app = create_app(config_file="settings.py")   

@@ -2,8 +2,8 @@
 
 {% block urladded %}
 <div class="results"> 
-<p class="originalurl">Original Url: {{original_url}}</p> <br>
-<p class="shortenedurl">Shortened Url: {{ url_for('shortener.redirect_to_original_url', query_short_url = short_url , _external = True)}}</p>
+<p class="originalurl">Original Url: <span class="originaldata">{{original_url}}</span> </p> <br>
+<p class="shortenedurl">Shortened Url: <span class="shorteneddata">{{ url_for('shortener.redirect_to_original_url', query_short_url = short_url , _external = True)}} </span></p>
 </div>
 
 {% endblock %}

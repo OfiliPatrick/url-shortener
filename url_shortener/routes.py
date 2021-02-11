@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, redirect
 from .extensions import db
 from .models import Url
 from .auth import requires_auth
+from validators import url
 
 shortener = Blueprint('shortener', __name__)
 
@@ -15,6 +16,9 @@ def index():
 @requires_auth
 def add_url():
     original_url = request.form["original_url"]
+    if not url(original_url):
+        return render_template("error.html", error="Invalid URL, enter a valid URL.")
+        
     new_url = Url(original_url=original_url)
     db.session.add(new_url)
     db.session.commit()

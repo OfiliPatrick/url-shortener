@@ -1,12 +1,24 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block body %}
 
-{% block body %}
-
-{% for url in urls %}
-Original Url: {{url.original_url}} 
-Short URL: {{url.short_url}}
-views: {{url.views}}
-<br/>
-{% endfor %}
+<h1 class="viewheader">URL Views Data</h1>
+<table class="viewtable">
+  <tr>
+    <th style="width: 10px">S/N</th>
+    <th style="width: 400px">Original URL</th>
+    <th style="width: 100px">Shortened URL</th>
+    <th style="width: 10px">Views</th>
+    <th style="width: 100px">Date Created</th>
+  </tr>
+  {% for url in urls %}
+  <tr>
+    <td>{{url.id}}</td>
+    <td>{{url.original_url}}</td>
+    <td>{{url.short_url}}</td>
+    <td>{{url.views}}</td>
+    <td>{{url.date_created}}</td>
+  </tr>
+  {% endfor %}
+</table>
+<!-- <br/> -->
 
 {% endblock %}

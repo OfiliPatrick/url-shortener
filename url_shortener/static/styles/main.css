@@ -10,8 +10,8 @@
 }
 
 body {
-  /* background-color: rgb(0, 84, 144); */
-  background: none repeat scroll 0 0 #005490;
+  background-color: rgb(0, 84, 144);
+  /* background: none repeat scroll 0 0 #005490; */
 }
 
 a,
@@ -42,6 +42,7 @@ header {
 
 .nav-links li a {
   transition: all 0.3s ease 0s;
+  font-size: 0.9rem;
 }
 
 .nav-links li a:hover {
@@ -59,8 +60,8 @@ header {
 }
 
 .logoimage {
-  height: 30px;
-  width: 30px;
+  height: 27px;
+  width: 27px;
   margin-right: 5px;
 }
 
@@ -84,16 +85,6 @@ button {
   outline: none;
 }
 
-/* Hero */
-
-/* .hero {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-weight: 100;
-  padding-top: 6%;
-} */
 
 .mainheading {
   margin-top: 0.5%;
@@ -106,7 +97,7 @@ button {
 }
 
 .about {
-  margin-bottom: 4%;
+  margin-bottom: 2%;
   color: white;
   text-align: center;
 }
@@ -129,7 +120,7 @@ button {
   width: 50%;
   padding: 40px, 0px;
   margin-right: 15px;
-  border-radius: 20px;
+  border-radius: 17px;
   border: none;
   padding: 15px 0;
   outline: none;
@@ -137,30 +128,77 @@ button {
   font-size: medium;
 }
 
+
 .submitbutton {
-  color: black;
-  border-radius: 10px;
-  background-color: rgb(255, 213, 0);
+  color: rgb(63, 63, 63);
+  border-radius: 17px;
+  background-color: rgb(241, 210, 52);
   border: none;
   width: 11%;
-  padding: 10px 0;
-  font-size: 1rem;
+  padding: 15px 0;
+  font-size: 1.1rem;
   outline: none;
 }
 
-/* Results */
 
-.results {
-  text-align: center;
-  justify-content: center;
+.submitbutton:hover {
+  color: #13b9e2;
+   transition: all 0.8s
 }
 
+
+/* Results */
 .originalurl {
   color: white;
   margin-top: 20px;
-  text-align: center;
+  padding-left: 19%;
+  font-family: "Montserrat" sans-serif;
+  font-size: large;
 }
 
 .shortenedurl {
+  font-family: "montserrat", sans-serif;
+  font-size: large;
   color: white;
+  padding-left: 19%;
+}
+
+.shorteneddata{
+  color:  rgb(255, 213, 0);
+}
+
+.error{
+  color: white;
+  font-family: "montserrat", sans-serif;
+  font-size: large;
+  padding-left: 19%;
+}
+.errordata{
+   color: red;
+}
+
+ .viewtable{
+   width:100%;
+   background-color: white;
+ }
+
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+tr:hover {background-color:#f5f5f5;}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.viewheader{
+  text-align: center;
+  background-color: white;
 }

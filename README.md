@@ -10,7 +10,7 @@ Utilized Flask Rest framework, SQL, and implemented Base62 encoding algorithm fo
 
 ## Live Demo
 
-Find the live version of the app here: [shrinkly](https://shrinkly.herokuapp.com/)
+Find the live version of the app here: [Shrinkly.com](https://shrinkly.herokuapp.com/)
 
 ## Project Structure
 
@@ -63,4 +63,4 @@ $ flask run
 
 6. Navigate to [http://localhost:5000](http://localhost:5000)
 
-All configuration is in: settings.py
+All configuration is in settings.py.

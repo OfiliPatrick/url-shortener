@@ -11,7 +11,6 @@
 
 body {
   background-color: rgb(0, 84, 144);
-  /* background: none repeat scroll 0 0 #005490; */
 }
 
 a,
@@ -65,13 +64,12 @@ header {
   margin-right: 5px;
 }
 
-.heroimage{
-  text-align: center;
-  justify-content: center;
-  height: 250px;
-  width: 250px;
-  margin: 0px 42%
-
+.heroimage {
+  height: 247px;
+  width: 247px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
@@ -84,7 +82,6 @@ button {
   margin-left: 20px;
   outline: none;
 }
-
 
 .mainheading {
   margin-top: 0.5%;
@@ -119,7 +116,7 @@ button {
 .urlinput {
   width: 50%;
   padding: 40px, 0px;
-  margin-right: 15px;
+  margin-right: 10px;
   border-radius: 17px;
   border: none;
   padding: 15px 0;
@@ -128,11 +125,10 @@ button {
   font-size: medium;
 }
 
-
 .submitbutton {
   color: rgb(63, 63, 63);
   border-radius: 17px;
-  background-color: rgb(241, 210, 52);
+  background-color: rgb(240, 198, 82);
   border: none;
   width: 11%;
   padding: 15px 0;
@@ -140,12 +136,10 @@ button {
   outline: none;
 }
 
-
 .submitbutton:hover {
   color: #13b9e2;
-   transition: all 0.8s
+  transition: all 0.8s;
 }
-
 
 /* Results */
 .originalurl {
@@ -163,31 +157,34 @@ button {
   padding-left: 19%;
 }
 
-.shorteneddata{
-  color:  rgb(255, 213, 0);
+.shorteneddata {
+  color:  rgb(240, 198, 82);
 }
 
-.error{
+.error {
   color: white;
   font-family: "montserrat", sans-serif;
   font-size: large;
   padding-left: 19%;
 }
-.errordata{
-   color: red;
+.errordata {
+  color: red;
 }
 
- .viewtable{
-   width:100%;
-   background-color: white;
- }
+.viewtable {
+  width: 100%;
+  background-color: white;
+}
 
- table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   text-align: center;
 }
@@ -195,10 +192,14 @@ th, td {
 th {
   text-align: center;
 }
-tr:hover {background-color:#f5f5f5;}
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover {
+  background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-.viewheader{
+.viewheader {
   text-align: center;
   background-color: white;
 }

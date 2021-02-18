@@ -134,6 +134,7 @@ button {
   padding: 15px 0;
   font-size: 1.1rem;
   outline: none;
+  cursor: pointer;
 }
 
 .submitbutton:hover {
@@ -159,6 +160,7 @@ button {
 
 .shorteneddata {
   color:  rgb(240, 198, 82);
+  font-size: large;
 }
 
 .error {

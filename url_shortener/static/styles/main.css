@@ -163,6 +163,12 @@ button {
   font-size: large;
 }
 
+.shorteneddata:hover {
+  color: #13b9e2;
+  transition: all 0.8s;
+}
+
+
 .error {
   color: white;
   font-family: "montserrat", sans-serif;

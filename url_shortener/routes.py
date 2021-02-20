@@ -5,15 +5,13 @@ from .auth import requires_auth
 from validators import url
 
 shortener = Blueprint('shortener', __name__)
-
 @shortener.route("/")
-@requires_auth
+# @requires_auth
 def index():
     return render_template("index.html")
 
-
 @shortener.route("/add_url", methods=["POST"])
-@requires_auth
+# @requires_auth
 def add_url():
     original_url = request.form["original_url"]
     if not url(original_url):
@@ -34,7 +32,7 @@ def redirect_to_original_url(query_short_url):
 
 
 @shortener.route("/views")
-@requires_auth
+# @requires_auth
 def views():
     urls = Url.query.all()
     return render_template("view_stats.html", urls = urls)

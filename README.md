@@ -25,7 +25,6 @@ Find the live version of the app here: [Shrinkly.com](https://shrinkly.herokuapp
     ├── static  
     ├── templates
     ├── __init__.py
-    ├── auth.py
     ├── extensions.py
     ├── models.py
     ├── routes.py

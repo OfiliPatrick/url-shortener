@@ -19,7 +19,6 @@ def add_url():
     db.session.commit()
     return render_template("url_added.html", original_url= original_url, short_url = new_url.short_url )
 
-
 @shortener.route("/<query_short_url>")
 def redirect_to_original_url(query_short_url):
     db_url = Url.query.filter_by(short_url=query_short_url).first_or_404()
@@ -27,11 +26,6 @@ def redirect_to_original_url(query_short_url):
     db.session.commit()
     return redirect(db_url.original_url)
 
-
-@shortener.route("/views")
-def views():
-    urls = Url.query.all()
-    return render_template("view_stats.html", urls = urls)
 
 @shortener.errorhandler(404)
 def page_not_found(e):

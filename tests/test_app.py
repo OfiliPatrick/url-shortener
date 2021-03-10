@@ -36,26 +36,13 @@ class AppTest(TestCase):
     def test_redirect(self):
         tester = self.client
         response = tester.get("/15EKbU6e")
-        print(response.data)
         status_code = response.status_code
         self.assertEqual(status_code, 302)
-
-    def test_views(self):
-        tester = self.client
-        response = tester.get("/views")
-        status_code = response.status_code
-        self.assertEqual(status_code, 200)
 
     # Test Content Type
     def test_index_content_type(self):
         tester = self.client
         response = tester.get("/")
-        content_type = response.content_type
-        self.assertEqual(content_type, "text/html; charset=utf-8")
-
-    def test_views_content_type(self):
-        tester = self.client
-        response = tester.get("/views")
         content_type = response.content_type
         self.assertEqual(content_type, "text/html; charset=utf-8")
 

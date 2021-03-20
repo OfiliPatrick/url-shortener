@@ -1,8 +1,11 @@
+"""A module containing Unit Tests"""
+
 try:
-    import sys, os
+    import sys
+    import os
     sys.path.append(os.path.abspath(os.path.join('..', 'url-shortener')))
-    from url_shortener import create_app, db
-    from url_shortener.models import Url
+    from url_shortener import create_app
+    from url_shortener import db
     from flask_testing import TestCase
     import unittest
 
